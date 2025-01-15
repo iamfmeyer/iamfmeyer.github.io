@@ -2,12 +2,12 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Frederic Meyer – A Personal Website</title>
+  <title>Frederic Meyer – Data Engineer & mehr</title>
   
-  <!-- Falls du Google Fonts nutzen möchtest, entferne die Kommentar-Tags:
+  <!-- Optional: Google Fonts (auskommentiert lassen oder aktivieren) -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  -->
+  
 
   <style>
     /* =============== RESET =============== */
@@ -19,18 +19,15 @@
 
     /* =============== GRUNDDESIGN =============== */
     body {
-      /* Entweder einfarbiges Dunkel oder ein dezentes Gradient */
-      /* background-color: #121212; */
+      /* Hintergrundfarbe oder Gradient */
       background: linear-gradient(160deg, #121212 0%, #1c1c1c 100%);
-      
-      /* Schriftart anpassen, falls Google Fonts eingebunden:
-         font-family: 'Montserrat', sans-serif; */
+      /* Schriftart anpassen, wenn Google Fonts eingebunden: */
+      /* font-family: 'Montserrat', sans-serif; */
       font-family: Arial, sans-serif;
       color: #fff;
       line-height: 1.6;
     }
 
-    /* Container für zentrierten Inhalt */
     .container {
       max-width: 800px;
       margin: 0 auto;
@@ -38,7 +35,6 @@
       text-align: center;
     }
 
-    /* Überschriften-Design */
     h1, h2, h3 {
       margin-bottom: 10px;
       font-weight: 400;
@@ -56,7 +52,6 @@
       color: #8c8c8c;
     }
 
-    /* Eine dezente Trennlinie */
     .separator {
       margin: 30px auto;
       width: 60px;
@@ -67,6 +62,34 @@
     p {
       margin: 15px 0;
       font-size: 1rem;
+      color: #d0d0d0;
+    }
+
+    /* =============== NEUE ABSCHNITTE =============== */
+    .about, .skills {
+      margin: 40px 0;
+      text-align: left; /* Damit Textabsätze besser lesbar sind */
+    }
+    .about h2, .skills h2 {
+      text-align: center;
+      color: #c1c1c1;
+      font-size: 1.75rem;
+      margin-bottom: 20px;
+    }
+    .about p {
+      text-align: left;
+      color: #d0d0d0;
+      margin-bottom: 10px;
+    }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      display: inline-block; /* So bleiben die Bullets in der Mitte */
+      text-align: left;
+    }
+    .skills li {
+      margin: 5px 0;
       color: #d0d0d0;
     }
 
@@ -88,13 +111,11 @@
       height: 50px;
     }
 
-    /* Hover-Effekt für Icons */
     .social-media-icons a:hover {
       transform: scale(1.1);
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     }
 
-    /* Links allgemein (falls Textlinks) */
     a {
       text-decoration: none;
       color: #c1c1c1;
@@ -120,12 +141,19 @@
       .social-media-icons {
         gap: 20px;
       }
+      .about, .skills {
+        text-align: center;
+      }
+      .about p, .skills ul {
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="container">
+    <!-- Kurzer Begrüßungsteil -->
     <h2>Hallo,</h2>
     <h1>ich bin Frederic.</h1>
     
@@ -134,11 +162,40 @@
     <h2>Data Engineer</h2>
     <h3>Computer Scientist (B.Sc.) – Economist (B.Sc.) – Sports Scientist (B.A.)</h3>
 
-    <p class="separator"></p>
-    
-    <p>Würde mich freuen, wenn wir uns vernetzen!</p>
-    <p>Hier findest du meine Profile:</p>
-    
+    <!-- Kurzer "Über mich"-Abschnitt -->
+    <div class="about">
+      <h2>Über mich</h2>
+      <p>
+        Aktuell arbeite ich als Data Engineer bei Provinzial. Dabei nutze ich Technologien wie 
+        Python, Spark, Airflow und Snowflake, um komplexe Datenpipelines für verschiedene 
+        Geschäftsbereiche zu entwickeln und zu automatisieren.
+      </p>
+      <p>
+        Durch meine interdisziplinären Studiengänge (Informatik, VWL, Sportwissenschaft) 
+        betrachte ich Projekte gerne aus unterschiedlichen Blickwinkeln. Meine Erfahrung 
+        umfasst zudem Machine Learning, DevOps und agiles Projektmanagement. 
+      </p>
+      <p>
+        Ich engagiere mich gerne in Sportvereinen als Jugendmentor und bin immer offen 
+        für spannende Kollaborationen und neue Herausforderungen.
+      </p>
+    </div>
+
+    <!-- Skills & Zertifizierungen -->
+    <div class="skills">
+      <h2>Tech Stack & Skills</h2>
+      <ul>
+        <li>Python, Java, SQL</li>
+        <li>Apache Spark, Airflow, dbt</li>
+        <li>Snowflake, Databricks, Azure DevOps</li>
+        <li>Terraform, Docker, Git</li>
+        <li>CI/CD, Ansible, Agile PM</li>
+      </ul>
+    </div>
+
+    <p>Sprache: Deutsch (native), Englisch (fluent), Spanisch (proficient)</p>
+    <p>Kontakt gerne über LinkedIn oder GitHub!</p>
+
     <div class="social-media-icons">
       <a href="https://www.linkedin.com/in/frederic-meyer-89b154b4/" target="_blank">
         <img src="media/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn Logo">
