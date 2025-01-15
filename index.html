@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <title>Frederic Meyer – Data Engineer</title>
 
-  <!-- Optional: Google Fonts, hier z.B. 'Montserrat' -->
+  <!-- Google Fonts: Montserrat -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  
 
   <style>
     /* =============== RESET =============== */
@@ -19,10 +18,9 @@
 
     /* =============== BASE STYLES =============== */
     body {
-      /* Moderner, dezenter Gradient mit dunklen Tönen */
-      background: linear-gradient(160deg, #141414 0%, #1f1f1f 100%);
-      font-family: 'Montserrat', sans-serif; 
-      font-family: Arial, sans-serif;
+      /* Leicht farbiger Gradient-Hintergrund */
+      background: linear-gradient(160deg, #141414 0%, #1f1f1f 60%, #2a1f46 100%);
+      font-family: 'Montserrat', sans-serif;
       color: #fff;
       line-height: 1.5;
     }
@@ -43,12 +41,20 @@
       font-weight: 600;
       color: #fafafa;
       margin-bottom: 10px;
+      transition: color 0.3s ease;
     }
-    header h2 {
+    header h1:hover {
+      color: #fff;
+    }
+
+    /* Dezenter Akzent für H2 */
+    header h2,
+    .skills-section h2 {
       font-size: 1.8rem;
-      color: #cfcfcf;
+      color: #a58af9; /* Lila Akzent */
       margin-bottom: 5px;
     }
+
     header h3 {
       font-size: 1.2rem;
       color: #999;
@@ -67,21 +73,25 @@
       margin: 40px 0;
       text-align: center;
     }
-    .skills-section h2 {
-      font-size: 1.75rem;
-      color: #c1c1c1;
-      margin-bottom: 20px;
+    .skill-badges {
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      gap: 10px; 
+      margin-top: 20px;
     }
-    .skills-list {
-      list-style: none;
-      margin: 0 auto;
-      padding: 0;
+    .skill-badges span {
+      background-color: #333; 
+      padding: 8px 12px; 
+      border-radius: 5px; 
+      color: #fff; 
+      font-size: 0.9rem;
       display: inline-block;
-      text-align: left;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
-    .skills-list li {
-      margin: 8px 0;
-      color: #d0d0d0;
+    .skill-badges span:hover {
+      background-color: #444;
+      transform: scale(1.05);
     }
 
     /* =============== SOCIAL / CONTACT SECTION =============== */
@@ -108,6 +118,7 @@
     a {
       text-decoration: none;
       color: #c1c1c1;
+      transition: color 0.2s ease;
     }
     a:hover {
       color: #fff;
@@ -145,145 +156,26 @@
 
     <div class="separator"></div>
 
-<section class="skills-section" style="text-align: center;">
-  <h2>Tech Stack & Skills</h2>
-  
-  <!-- Container für die „Badges“ -->
-  <div class="skill-badges" style="
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 10px; 
-    margin-top: 20px;
-  ">
-    <!-- Einzelne „Badges“ -->
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">Python</span>
-
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">SQL</span>
-
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">Apache Spark</span>
-    
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">Airflow</span>
-    
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">dbt</span>
-    
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">Snowflake</span>
-
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">Databricks</span>
-
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">Azure DevOps</span>
-
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">Terraform</span>
-
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">Docker</span>
-
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">Git</span>
-
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">CI/CD</span>
-
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">Ansible</span>
-
-    <span style="
-      background-color: #333; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      color: #fff; 
-      font-size: 0.9rem;
-      display: inline-block;
-    ">Machine Learning</span>
-  </div>
-</section>
+    <!-- Skills Section mit Badges -->
+    <section class="skills-section" style="text-align: center;">
+      <h2>Tech Stack & Skills</h2>
+      <div class="skill-badges">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Apache Spark</span>
+        <span>Airflow</span>
+        <span>dbt</span>
+        <span>Snowflake</span>
+        <span>Databricks</span>
+        <span>Azure DevOps</span>
+        <span>Terraform</span>
+        <span>Docker</span>
+        <span>Git</span>
+        <span>CI/CD</span>
+        <span>Ansible</span>
+        <span>Machine Learning</span>
+      </div>
+    </section>
 
     <div class="separator"></div>
 
