@@ -2,12 +2,13 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Frederic Meyer – Data Engineer & mehr</title>
-  
-  <!-- Optional: Google Fonts (auskommentiert lassen oder aktivieren) -->
+  <title>Frederic Meyer – Data Engineer</title>
+
+  <!-- Optional: Google Fonts, hier z.B. 'Montserrat' -->
+  <!--
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  -->
 
   <style>
     /* =============== RESET =============== */
@@ -17,15 +18,15 @@
       box-sizing: border-box;
     }
 
-    /* =============== GRUNDDESIGN =============== */
+    /* =============== BASE STYLES =============== */
     body {
-      /* Hintergrundfarbe oder Gradient */
-      background: linear-gradient(160deg, #121212 0%, #1c1c1c 100%);
-      /* Schriftart anpassen, wenn Google Fonts eingebunden: */
+      /* Moderner, dezenter Gradient mit dunklen Tönen */
+      background: linear-gradient(160deg, #141414 0%, #1f1f1f 100%);
+      /* Falls du Google Fonts einsetzt, aktiviere folgende Zeile: */
       /* font-family: 'Montserrat', sans-serif; */
       font-family: Arial, sans-serif;
       color: #fff;
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     .container {
@@ -35,87 +36,77 @@
       text-align: center;
     }
 
-    h1, h2, h3 {
-      margin-bottom: 10px;
-      font-weight: 400;
+    /* =============== HEADLINE SECTION =============== */
+    header {
+      margin-bottom: 40px;
     }
-    h1 {
+    header h1 {
       font-size: 3rem;
-      color: #f0f0f0;
+      font-weight: 600;
+      color: #fafafa;
+      margin-bottom: 10px;
     }
-    h2 {
-      font-size: 2rem;
-      color: #c1c1c1;
+    header h2 {
+      font-size: 1.8rem;
+      color: #cfcfcf;
+      margin-bottom: 5px;
     }
-    h3 {
-      font-size: 1.25rem;
-      color: #8c8c8c;
+    header h3 {
+      font-size: 1.2rem;
+      color: #999;
     }
 
+    /* =============== SEPARATORS & LINE =============== */
     .separator {
-      margin: 30px auto;
-      width: 60px;
+      margin: 40px auto;
+      width: 80px;
       height: 2px;
       background-color: #555;
     }
 
-    p {
-      margin: 15px 0;
-      font-size: 1rem;
-      color: #d0d0d0;
-    }
-
-    /* =============== NEUE ABSCHNITTE =============== */
-    .about, .skills {
+    /* =============== SKILLS SECTION =============== */
+    .skills-section {
       margin: 40px 0;
-      text-align: left; /* Damit Textabsätze besser lesbar sind */
-    }
-    .about h2, .skills h2 {
       text-align: center;
-      color: #c1c1c1;
+    }
+    .skills-section h2 {
       font-size: 1.75rem;
+      color: #c1c1c1;
       margin-bottom: 20px;
     }
-    .about p {
-      text-align: left;
-      color: #d0d0d0;
-      margin-bottom: 10px;
-    }
-    .skills ul {
+    .skills-list {
       list-style: none;
-      padding: 0;
       margin: 0 auto;
-      display: inline-block; /* So bleiben die Bullets in der Mitte */
+      padding: 0;
+      display: inline-block;
       text-align: left;
     }
-    .skills li {
-      margin: 5px 0;
+    .skills-list li {
+      margin: 8px 0;
       color: #d0d0d0;
     }
 
-    /* =============== SOCIAL MEDIA SECTION =============== */
+    /* =============== SOCIAL / CONTACT SECTION =============== */
     .social-media-icons {
       display: flex;
       justify-content: center;
       gap: 40px;
       margin-top: 40px;
     }
-
     .social-media-icons a {
       display: inline-block;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .social-media-icons img {
       width: 50px;
       height: 50px;
     }
-
     .social-media-icons a:hover {
       transform: scale(1.1);
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     }
 
+    /* Allgemeine Link-Farbe & Hover */
     a {
       text-decoration: none;
       color: #c1c1c1;
@@ -124,78 +115,54 @@
       color: #fff;
     }
 
-    /* =============== RESPONSIVE ANPASSUNGEN =============== */
+    /* =============== RESPONSIVE ADJUSTMENTS =============== */
     @media (max-width: 600px) {
-      h1 {
+      header h1 {
         font-size: 2rem;
       }
-      h2 {
-        font-size: 1.5rem;
+      header h2 {
+        font-size: 1.3rem;
       }
-      h3 {
-        font-size: 1.1rem;
+      header h3 {
+        font-size: 1rem;
       }
       .separator {
-        margin: 20px auto;
+        margin: 30px auto;
+        width: 60px;
       }
       .social-media-icons {
         gap: 20px;
-      }
-      .about, .skills {
-        text-align: center;
-      }
-      .about p, .skills ul {
-        text-align: center;
       }
     }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <!-- Kurzer Begrüßungsteil -->
-    <h2>Hallo,</h2>
-    <h1>ich bin Frederic.</h1>
-    
+    <!-- Header-Bereich mit deinem Haupt-Titel -->
+    <header>
+      <h2>Hi, ich bin</h2>
+      <h1>Frederic Meyer</h1>
+      <h2>Data Engineer</h2>
+    </header>
+
     <div class="separator"></div>
-    
-    <h2>Data Engineer</h2>
-    <h3>Computer Scientist (B.Sc.) – Economist (B.Sc.) – Sports Scientist (B.A.)</h3>
 
-    <!-- Kurzer "Über mich"-Abschnitt -->
-    <div class="about">
-      <h2>Über mich</h2>
-      <p>
-        Aktuell arbeite ich als Data Engineer bei Provinzial. Dabei nutze ich Technologien wie 
-        Python, Spark, Airflow und Snowflake, um komplexe Datenpipelines für verschiedene 
-        Geschäftsbereiche zu entwickeln und zu automatisieren.
-      </p>
-      <p>
-        Durch meine interdisziplinären Studiengänge (Informatik, VWL, Sportwissenschaft) 
-        betrachte ich Projekte gerne aus unterschiedlichen Blickwinkeln. Meine Erfahrung 
-        umfasst zudem Machine Learning, DevOps und agiles Projektmanagement. 
-      </p>
-      <p>
-        Ich engagiere mich gerne in Sportvereinen als Jugendmentor und bin immer offen 
-        für spannende Kollaborationen und neue Herausforderungen.
-      </p>
-    </div>
-
-    <!-- Skills & Zertifizierungen -->
-    <div class="skills">
+    <!-- Skills Section -->
+    <section class="skills-section">
       <h2>Tech Stack & Skills</h2>
-      <ul>
+      <ul class="skills-list">
         <li>Python, Java, SQL</li>
         <li>Apache Spark, Airflow, dbt</li>
         <li>Snowflake, Databricks, Azure DevOps</li>
         <li>Terraform, Docker, Git</li>
         <li>CI/CD, Ansible, Agile PM</li>
       </ul>
-    </div>
+    </section>
 
-    <p>Sprache: Deutsch (native), Englisch (fluent), Spanisch (proficient)</p>
-    <p>Kontakt gerne über LinkedIn oder GitHub!</p>
+    <div class="separator"></div>
 
+    <!-- Social Media / Kontakt -->
+    <p>Let’s connect:</p>
     <div class="social-media-icons">
       <a href="https://www.linkedin.com/in/frederic-meyer-89b154b4/" target="_blank">
         <img src="media/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn Logo">
@@ -208,6 +175,5 @@
       </a>
     </div>
   </div>
-
 </body>
 </html>
